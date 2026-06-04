@@ -1,0 +1,220 @@
+/* Configurações Globais */
+:root {
+    --bg-color: #e0e5ec; /* Cinza claro do fundo */
+    --text-primary: #37474f;
+    --text-secondary: #546e7a;
+    --icon-default: #90a4ae;
+    --primary-blue: #2196f3;
+    --youtube-red: #ff0000;
+    
+    /* Sombras Neumórficas */
+    --shadow-dark: rgba(163, 177, 198, 0.7);
+    --shadow-light: rgba(255, 255, 255, 0.8);
+    --shadow-pressed-dark: rgba(163, 177, 198, 0.5);
+    --shadow-pressed-light: rgba(255, 255, 255, 0.6);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+}
+
+body {
+    background-color: var(--bg-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Classes de Utilidade Neumórfica */
+.neu-raised {
+    box-shadow: 6px 6px 12px var(--shadow-dark), 
+               -6px -6px 12px var(--shadow-light);
+}
+
+.neu-pressed {
+    box-shadow: inset 6px 6px 12px var(--shadow-pressed-dark), 
+               inset -6px -6px 12px var(--shadow-pressed-light);
+}
+
+/* Container Principal (opcional, para centralizar melhor) */
+.main-container {
+    perspective: 1000px;
+}
+
+/* O Cartão Principal */
+.card {
+    background-color: var(--bg-color);
+    width: 380px;
+    border-radius: 25px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.2s;
+}
+
+/* Header (Voltar e Opções) */
+.card-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.btn-icon {
+    background: none;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--icon-default);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-icon:active {
+    box-shadow: 6px 6px 12px var(--shadow-dark), 
+               -6px -6px 12px var(--shadow-light);
+}
+
+/* Foto de Perfil */
+.profile-pic-container {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+.profile-pic {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--bg-color);
+}
+
+/* Informações de Texto */
+.profile-info {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.name {
+    font-size: 24px;
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.title {
+    font-size: 16px;
+    color: var(--text-secondary);
+    font-weight: 400;
+}
+
+/* Ícones Sociais */
+.social-icons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.btn-social {
+    background: none;
+    border: none;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-social i {
+    font-size: 20px;
+}
+
+/* Cores específicas dos ícones */
+.btn-social.fb i { color: #3b5998; }
+.btn-social.tw i { color: var(--primary-blue); }
+.btn-social.inst i { color: #e1306c; }
+.btn-social.yt i { color: var(--youtube-red); }
+
+.btn-social:active {
+    box-shadow: 6px 6px 12px var(--shadow-dark), 
+               -6px -6px 12px var(--shadow-light);
+}
+
+/* Botões de Ação */
+.action-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.btn-action {
+    background-color: var(--bg-color);
+    border: none;
+    flex: 1;
+    padding: 15px;
+    border-radius: 12px;
+    font-size: 16px;
+    color: var(--text-primary);
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.btn-action:active {
+    box-shadow: inset 6px 6px 12px var(--shadow-pressed-dark), 
+               inset -6px -6px 12px var(--shadow-pressed-light);
+}
+
+/* Rodapé de Estatísticas */
+.stats-footer {
+    width: 100%;
+    background-color: var(--bg-color);
+    border-radius: 15px;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stat-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--icon-default);
+}
+
+.stat-item i {
+    font-size: 18px;
+}
+
+.stat-value {
+    font-size: 15px;
+    color: var(--text-primary);
+    font-weight: 500;
+}
+
+.stat-divider {
+    color: var(--shadow-dark);
+    font-size: 18px;
+    font-weight: 300;
+}
